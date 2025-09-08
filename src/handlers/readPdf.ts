@@ -253,7 +253,7 @@ const extractMetadataAndPageCount = async (
         output.info = infoData;
       }
       const metadataObj = pdfMetadata.metadata;
-      const metadataData = metadataObj.getAll() as PdfMetadata | undefined;
+      const metadataData = metadataObj as unknown as PdfMetadata | undefined;
       if (metadataData !== undefined) {
         output.metadata = metadataData;
       }
